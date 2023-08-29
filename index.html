@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="C'est ici que j'apprends le dev Front-End">
-    <title>Calculateur cercle</title>
+    <meta name="description" content="Calculateur Carré">
+    <title>Calculateur Carré</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bulma/css/bulma-rtl.min.css">
     <link rel="icon" href="">
@@ -16,14 +16,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
 
-
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" src="Mathjax.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
 </head>
 
 <body class="has-background-grey-lighter">
 
     <h1 class="title has-text-centered">Calculateur Carre</h1>
-    <p class="subtitle has-text-centered">Sélectionnez le type de valeur que vous souhaitez entrer (arête, aire, périmètre ou diagonale)</p>
+    <p class="subtitle has-text-centered">Entrez une valeur parmi (arête, aire, périmètre ou diagonale)</p>
     <div class="container1">
         <div class="peri">
             <h1>Arête: </h1>
@@ -43,8 +44,11 @@
         </div>
     </div>
     <button class="button is-danger is-light mt-3">Calculer</button>
-    <button class="button is-danger is-light mt-3">Reset</button>
+    <button id="reset" class="button is-danger is-light mt-3">Reset</button>
 
+    <div class="equation">
+        
+    </div>
 
     <script defer src="app.js"></script>
 </body>

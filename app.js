@@ -2,7 +2,7 @@ let arete = document.getElementById('arete')
 let aire = document.getElementById('aire')
 let perimetre = document.getElementById('perimetre')
 let diagonale = document.getElementById('diagonale')
-let button = document.querySelector('button')
+let btnReset = document.getElementById('reset')
 
 
 arete.onchange = function () {
@@ -11,6 +11,8 @@ arete.onchange = function () {
     aire.value = number * number
     perimetre.value = 4 * number
     diagonale.value = Math.sqrt(2) * number
+
+    areteE()
 }
 
 
@@ -19,9 +21,10 @@ aire.onchange = function () {
 
     let newAire = Math.sqrt(number)
     arete.value = newAire
-    perimetre.value = 4 * newAire
-    diagonale.value = Math.sqrt(2) * newAire
+    perimetre.value = 4 * arete.value
+    diagonale.value = Math.sqrt(2) * arete.value
 
+    aireE()
 }
 
 perimetre.onchange = function () {
@@ -29,8 +32,10 @@ perimetre.onchange = function () {
 
     let newArete = number / 4
     arete.value = newArete
-    aire.value = newArete * newArete
-    diagonale.value = Math.sqrt(2) * newArete
+    aire.value = arete.value * arete.value
+    diagonale.value = Math.sqrt(2) * arete.value
+
+    perimetreE()
 }
 
 diagonale.onchange = function () {
@@ -38,6 +43,18 @@ diagonale.onchange = function () {
 
     let newArete = number / Math.sqrt(2)
     arete.value = newArete
-    aire.value = newArete * newArete
-    perimetre.value = 4 * newArete
+    aire.value = arete.value * arete.value
+    perimetre.value = 4 * arete.value
+
+    diagonaleE()
+}
+
+
+btnReset.onclick = function () {
+    arete.value = ""
+    aire.value = ""
+    perimetre.value = ""
+    diagonale.value = ""
+    let ajout = document.querySelector('.equation');
+    ajout.innerHTML = ""
 }
