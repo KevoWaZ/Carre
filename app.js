@@ -18,9 +18,9 @@ arete.onchange = function () {
         arete.classList.replace("is-link", "is-danger")
         modal.classList.add("is-active")
     } else {
-        aire.value = number * number
-        perimetre.value = 4 * number
-        diagonale.value = Math.sqrt(2) * number
+        aire.value = (number * number).toFixed(3)
+        perimetre.value = (4 * number).toFixed(3)
+        diagonale.value = (Math.sqrt(2) * number).toFixed(3)
     
         updateNumbers()
         dangerToLink()
@@ -36,10 +36,10 @@ aire.onchange = function () {
         aire.classList.replace("is-link", "is-danger")
         modal.classList.add("is-active")
     } else {
-        let newAire = Math.sqrt(number)
-        arete.value = newAire
-        perimetre.value = 4 * arete.value
-        diagonale.value = Math.sqrt(2) * arete.value
+        let newAire = Math.sqrt(number).toFixed(3)
+        arete.value = Number(newAire).toFixed(3)
+        perimetre.value = (4 * arete.value).toFixed(3)
+        diagonale.value = (Math.sqrt(2) * arete.value).toFixed(3)
 
         updateNumbers()
         dangerToLink()
@@ -54,10 +54,10 @@ perimetre.onchange = function () {
         perimetre.classList.replace("is-link", "is-danger")
         modal.classList.add("is-active")
     } else {
-        let newArete = number / 4
-        arete.value = newArete
-        aire.value = arete.value * arete.value
-        diagonale.value = Math.sqrt(2) * arete.value
+        let newArete = (number / 4).toFixed(3)
+        arete.value = Number(newArete).toFixed(3)
+        aire.value = (arete.value * arete.value).toFixed(3)
+        diagonale.value = (Math.sqrt(2) * arete.value).toFixed(3)
     
         updateNumbers()
         dangerToLink()
@@ -72,10 +72,10 @@ diagonale.onchange = function () {
         diagonale.classList.replace("is-link", "is-danger")
         modal.classList.add("is-active")
     } else {
-        let newArete = number / Math.sqrt(2)
-        arete.value = newArete
-        aire.value = arete.value * arete.value
-        perimetre.value = 4 * arete.value
+        let newArete = (number / Math.sqrt(2)).toFixed(3)
+        arete.value = Number(newArete).toFixed(3)
+        aire.value = (arete.value * arete.value).toFixed(3)
+        perimetre.value = (4 * arete.value).toFixed(3)
     
         updateNumbers()
         dangerToLink()
