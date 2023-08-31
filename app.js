@@ -21,7 +21,8 @@ arete.onchange = function () {
         aire.value = (number * number).toFixed(3)
         perimetre.value = (4 * number).toFixed(3)
         diagonale.value = (Math.sqrt(2) * number).toFixed(3)
-    
+
+        resetEquation()
         updateNumbers()
         dangerToLink()
         areteE()
@@ -41,6 +42,7 @@ aire.onchange = function () {
         perimetre.value = (4 * arete.value).toFixed(3)
         diagonale.value = (Math.sqrt(2) * arete.value).toFixed(3)
 
+        resetEquation()
         updateNumbers()
         dangerToLink()
         aireE()
@@ -58,7 +60,8 @@ perimetre.onchange = function () {
         arete.value = Number(newArete).toFixed(3)
         aire.value = (arete.value * arete.value).toFixed(3)
         diagonale.value = (Math.sqrt(2) * arete.value).toFixed(3)
-    
+
+        resetEquation()
         updateNumbers()
         dangerToLink()
         perimetreE()
@@ -76,7 +79,8 @@ diagonale.onchange = function () {
         arete.value = Number(newArete).toFixed(3)
         aire.value = (arete.value * arete.value).toFixed(3)
         perimetre.value = (4 * arete.value).toFixed(3)
-    
+
+        resetEquation()
         updateNumbers()
         dangerToLink()
         diagonaleE()
@@ -89,8 +93,7 @@ btnReset.onclick = function () {
     aire.value = ""
     perimetre.value = ""
     diagonale.value = ""
-    let ajout = document.querySelector('.equation');
-    ajout.innerHTML = ""
+    resetEquation()
     updateNumbers()
     dangerToLink()
 }
@@ -107,4 +110,9 @@ function updateNumbers() {
     Numbers.diagonale = diagonale.value
     Numbers.perimetre = perimetre.value
     Numbers.aire = aire.value
+}
+
+function resetEquation() {
+    ajout = document.querySelector('.equation')
+    ajout.innerHTML = ""
 }
